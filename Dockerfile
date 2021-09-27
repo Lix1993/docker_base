@@ -10,6 +10,7 @@ RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.s
     conda config --add channels bioconda && \
     conda config --add channels conda-forge && \
     conda config --set channel_priority strict && \
-    conda update -y conda
+    conda update -y conda && \
+    conda clean --all -y
 
 ENV PATH=/miniconda/bin:${PATH}
